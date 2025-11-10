@@ -362,10 +362,8 @@ CodeBehind="Proveedores.aspx.cs" Inherits="StockifyWeb.Proveedores" Async="true"
             Width="100%" BorderStyle="None" GridLines="None" ShowHeader="true">
             <Columns>
                 <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-                <asp:BoundField DataField="Producto" HeaderText="Producto (Cat.)" />
                 <asp:BoundField DataField="Telefono" HeaderText="Teléfono" />
                 <asp:BoundField DataField="Email" HeaderText="Email" />
-                <asp:BoundField DataField="TipoEmpresa" HeaderText="Tipo Empresa" />
                 <asp:TemplateField HeaderText="Activo">
                     <ItemTemplate>
                         <span class='<%# Eval("Activo").ToString() == "Si" ? "status-active" : "status-inactive" %>'>

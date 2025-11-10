@@ -48,7 +48,7 @@ namespace StockifyWeb
                     gvProveedores.DataSource = proveedores;
                     gvProveedores.DataBind();
                     
-                    System.Diagnostics.Debug.WriteLine($"✅ Cargados {proveedores.Count} proveedores desde el Web Service");
+                    System.Diagnostics.Debug.WriteLine($"Cargados {proveedores.Count} proveedores desde el Web Service");
                 }
                 else
                 {
@@ -59,12 +59,12 @@ namespace StockifyWeb
             }
             catch (System.ServiceModel.EndpointNotFoundException ex)
             {
-                System.Diagnostics.Debug.WriteLine($"❌ Error de conexión: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Error de conexión: {ex.Message}");
                 CargarProveedoresEjemplo();
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"❌ Error: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Error: {ex.Message}");
                 System.Diagnostics.Debug.WriteLine($"Stack: {ex.StackTrace}");
                 CargarProveedoresEjemplo();
             }
@@ -112,12 +112,12 @@ namespace StockifyWeb
 
                 await CargarProveedoresAsync();
 
-                MostrarMensaje("✅ Proveedor agregado correctamente", true);
+                MostrarMensaje("Proveedor agregado correctamente", true);
             }
             catch (Exception ex)
             {
                 MostrarMensaje($"Error al agregar proveedor: {ex.Message}");
-                System.Diagnostics.Debug.WriteLine($"❌ Error al agregar: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Error al agregar: {ex.Message}");
             }
         }
 
@@ -140,11 +140,11 @@ namespace StockifyWeb
                 // El método guardarEmpresaAsync requiere empresa y estado
                 await cliente.guardarEmpresaAsync(nuevaEmpresa, estado.NUEVO);
                 
-                System.Diagnostics.Debug.WriteLine($"✅ Proveedor guardado: {razonSocial}");
+                System.Diagnostics.Debug.WriteLine($"Proveedor guardado: {razonSocial}");
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"❌ Error al guardar: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Error al guardar: {ex.Message}");
                 throw new Exception($"No se pudo guardar el proveedor: {ex.Message}", ex);
             }
         }
@@ -179,7 +179,7 @@ namespace StockifyWeb
         {
             mensaje = mensaje.Replace("'", "\\'");
             string script = esExitoso 
-                ? $"alert('✅ {mensaje}');" 
+                ? $"alert('{mensaje}');" 
                 : $"alert('{mensaje}');";
                 
             ScriptManager.RegisterStartupScript(this, GetType(), "mostrarMensaje", script, true);
