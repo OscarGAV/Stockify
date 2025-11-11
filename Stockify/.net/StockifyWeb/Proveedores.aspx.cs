@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using StockifyWeb.EmpresaWS;
+using StockifyWeb.StockifyWS;
 
 namespace StockifyWeb
 {

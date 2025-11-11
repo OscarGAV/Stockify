@@ -79,11 +79,6 @@
     <Content Include="Register.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\EmpresaService\EmpresaService.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmpresaService.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -143,10 +138,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\EmpresaService\EmpresaService.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>EmpresaService.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
     <Content Include="Stockify.Master" />
     <None Include="Web.Debug.config">
@@ -155,12 +146,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\EmpresaService" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
